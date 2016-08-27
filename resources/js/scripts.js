@@ -1,12 +1,12 @@
 $(document).ready(function() {
     setTimeout(function(){
         $('body').addClass('loaded');
-    }, 2000);
+    }, 1000);
 
     $('#main-nav').sidr();
 
     $('#fullpage').fullpage({
-        sectionsColor: ['transparent', '#4BBFC3', '#7BAABE', 'whitesmoke', 'transparent'],
+        sectionsColor: ['transparent', '#4BBFC3', '#7BAABE', '#27ae60', 'transparent'],
         'verticalCentered': true,
         'easing': 'easeInOutCirc',
         'css3': false,
@@ -32,7 +32,7 @@ $(document).ready(function() {
         }}
     });
 
-    $('#submit').click(function(){ 
+    $('#submit').click(function(){
         $.post("send.php", $("#contact-form").serialize(),  function(response) {
             $('#success').fadeIn().html(response);
             $('#success').delay(2000).fadeOut();
@@ -42,5 +42,5 @@ $(document).ready(function() {
 });
 jQuery(window).load(function() {
     // jQuery('#preloader').fadeOut('fast');
-    
+
 });
