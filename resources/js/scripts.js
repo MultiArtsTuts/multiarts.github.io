@@ -2,22 +2,24 @@ $(document).ready(function() {
     setTimeout(function(){
         $('body').addClass('loaded');
         $('#logo').removeClass('logo-center').addClass('fixed')
-    }, 5000);
+    }, 1000);
 
     $('#main-nav').sidr();
 
     $('#fullpage').fullpage({
         sectionsColor: ['transparent', '#4BBFC3', '#7BAABE', '#27ae60', 'rgba(0,55,33,.5)'],
-        'verticalCentered': true,
-        'easing': 'easeInOutCirc',
-        'css3': false,
-        'scrollingSpeed': 900,
-        'slidesNavigation': true,
-        'slidesNavPosition': 'bottom',
-        'easingcss3': 'ease',
-        'navigation': true,
+        navigationTooltips: ['Home', 'Segundo', 'Terceiro', 'Quarto', 'Quinto'],
+        showActiveTooltip: true,
+        verticalCentered: true,
+        easing: 'easeInOutCubic',
+        css3: false,
+        scrollingSpeed: 900,
+        slidesNavigation: true,
+        slidesNavPosition: 'bottom',
+        easingcss3: 'ease',
+        navigation: true,
         // 'anchors': ['Home', 'Features', 'Clients', 'Pricing', 'Contact'],
-        'navigationPosition': 'right'
+        'navigationPosition': 'right',
     });
     $('.screenshots-content, .clients-content').css('height', $(window).height());
 

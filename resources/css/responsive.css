@@ -10,9 +10,9 @@
 
     #logo {
         position: fixed;
-        width: 80%;
-        left: 0;
-        text-align: center;
+        /* width: 80%;
+        left: 50px;
+        text-align: center; */
     }
     #social-icons {
         position: fixed;
@@ -57,8 +57,9 @@
 
 @media (max-width: 870px) {
     h1, h2, h3 {
-        font-size: 40px;
+        font-size: 20px;
     }
+    .box-right{display: none;}
 
     #hand, .screenshots-wrapper, .section-image {
         display: none;
@@ -70,6 +71,7 @@
         text-align: center;
         font-size: 14px;
     }
+    .box p{width: 100%}
 
     #menu-logo {
         display: none;
@@ -167,8 +169,8 @@
 @media (min-width: 320px) and (max-width: 640px) {
     #social-icons{
         position: fixed;
-        bottom: 2%;
-        width: 100%;
+        /* bottom: 2%;
+        width: 100%; */
     }
     .box .box-right{display: none}
     .box p { margin: 15px 0; width: auto}
@@ -205,6 +207,8 @@
 
     #logo {
         top: 3%;
+        margin-left: 60px;
+        /*margin-top: -60px*/
     }
 
     #logo img {
