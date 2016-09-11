@@ -17,6 +17,7 @@ var gulp             = require('gulp'),
 
 var css = [
     './resources/css/style.css',
+    './resources/css/animate.css',
     './resources/css/flaticon.css',
     './resources/css/responsive.css'
 ],
@@ -32,7 +33,7 @@ html = [
 imgs = [
     'resources/images/*'
 ];
- 
+
 gulp.task('minimg', function(){
      gulp.src(imgs)
         .pipe(imagemin({
@@ -51,7 +52,7 @@ gulp.task('mincss', function(){
     .pipe(gulp.dest('./assets/css/'))
     .pipe(size());
 });
- 
+
 // Tarefa de minificação do Javascript
 gulp.task('minjs', function () {
     gulp.src(js)                     // Arquivos que serão carregados, veja variável 'js' no início
@@ -71,7 +72,7 @@ gulp.task('minhtml', function () {
     .pipe(gulp.dest('.'))
     .pipe(size());
 });
- 
+
 // Tarefa padrão quando executado o comando GULP
 gulp.task('default',['minjs','mincss','minhtml']);
 // Tarefa de monitoração caso algum arquivo seja modificado, deve ser executado e deixado aberto, comando "gulp watch".

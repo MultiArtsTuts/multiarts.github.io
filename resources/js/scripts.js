@@ -1,12 +1,13 @@
 $(document).ready(function() {
     setTimeout(function(){
         $('body').addClass('loaded');
-    }, 1000);
+        $('#logo').removeClass('logo-center').addClass('fixed')
+    }, 5000);
 
     $('#main-nav').sidr();
 
     $('#fullpage').fullpage({
-        sectionsColor: ['transparent', '#4BBFC3', '#7BAABE', '#27ae60', 'transparent'],
+        sectionsColor: ['transparent', '#4BBFC3', '#7BAABE', '#27ae60', 'rgba(0,55,33,.5)'],
         'verticalCentered': true,
         'easing': 'easeInOutCirc',
         'css3': false,
